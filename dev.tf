@@ -60,7 +60,7 @@ provisioner "remote-exec" {
         "sudo apt install python3-venv -y",
         "sudo apt install python3-virtualenv -y",
         "python3 -m venv /home/ubuntu/kumar",
-        ". /home/ubuntu/kumar/bin/activate",
+        "cd /home/ubuntu/kumar/bin/activate",
         "git clone https://github.com/Praveenchinna14/teerdha19.git",
         "cd teerdha19",
         "sudo apt install libmysqlclient-dev -y",
