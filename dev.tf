@@ -33,9 +33,9 @@ provisioner "remote-exec" {
         "pip install wheel",
         "pip install pillow",
         "pip install easy-pil",
-        "python /home/ubuntu/teerdha19/manage.py makemgrations",
-        "python /home/ubuntu/teerdha19/manage.py migrate",
-        "python /home/ubuntu/teerdha19/manage.py runserver 0.0.0.0:8000"     
+        "python3 /home/ubuntu/teerdha19/manage.py makemgrations",
+        "python3 /home/ubuntu/teerdha19/manage.py migrate",
+        "python3 /home/ubuntu/teerdha19/manage.py runserver 0.0.0.0:8000"     
     ]
     connection {
       type     = "ssh"
