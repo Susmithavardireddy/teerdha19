@@ -2,13 +2,13 @@ provider "aws" {
   region = "us-east-2"
 }
 
-resource "aws_instance" "name" {
+resource "aws_instance" "dev" {
   ami = "ami-0862be96e41dcbf74"
   instance_type = "t2.medium"
   key_name = "praveen"
   vpc_security_group_ids = [ "sg-0e7783eb3e866cde2" ]
   tags = {
-    Name = "teeerdhatf"
+    Name = "dev"
   }
   
 provisioner "remote-exec" {
