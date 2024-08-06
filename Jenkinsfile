@@ -23,5 +23,13 @@ pipeline{
             '''
             }
         }
+        stage('prod'){
+          sh '''
+            terraform init
+            terraform plan -out=prod.tfplan
+            terraform apply dev.tfplan
+            ''' 
+            }
+        }
     }
 }
