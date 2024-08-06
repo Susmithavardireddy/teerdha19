@@ -24,10 +24,12 @@ pipeline{
             }
         }
         stage('prod'){
+
+        steps  {    
           sh '''
             terraform init
-            terraform plan -out=prod.tfplan
-            terraform apply dev.tfplan
+            terraform plan -out=Prod.tfplan
+            terraform apply Prod.tfplan
             ''' 
             }
         }
