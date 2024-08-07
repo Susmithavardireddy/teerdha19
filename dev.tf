@@ -28,6 +28,7 @@ provisioner "remote-exec" {
         "pip install -r requirements.txt",
         "pip install django",
         "pip install django-rest-framework",
+        "pip install mysqlclient",
         "pip install requests",
         "pip install pyscopg2-binary",
         "pip install wheel",
