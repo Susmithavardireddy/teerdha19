@@ -33,7 +33,7 @@ provisioner "remote-exec" {
         "pip install pyscopg2-binary",
         "pip install wheel",
         "pip install pillow",
-        "python3 /home/ubuntu/teerdha19/manage.py makemgrations",
+        "python3 /home/ubuntu/teerdha19/manage.py makemigrations",
         "python3 /home/ubuntu/teerdha19/manage.py migrate",
         "python3 /home/ubuntu/teerdha19/manage.py runserver 0.0.0.0:8000"     
     ]
