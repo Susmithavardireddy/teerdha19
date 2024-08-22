@@ -40,7 +40,7 @@ provisioner "remote-exec" {
     connection {
       type     = "ssh"
       user     = "ubuntu"  
-      private_key = file("susmitha.pem")  
+      private_key = file("jenkins.pem")  
       host     = self.public_ip  
     }
  }
