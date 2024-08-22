@@ -13,7 +13,7 @@ pipeline{
 }
  }           
 }
-        stage('dev'){
+        stage('dev') {
 
       steps  {
             sh '''
@@ -21,17 +21,7 @@ pipeline{
             terraform plan -out=dev.tfplan
             terraform apply dev.tfplan
             '''
-            }
-        }
-        stage('prod'){
-
-        steps  {    
-          sh '''
-            terraform init
-            terraform plan -out=Prod.tfplan
-            terraform apply Prod.tfplan
-            ''' 
-            }
+              }
         }
     }
 }
