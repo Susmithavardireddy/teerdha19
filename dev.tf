@@ -42,8 +42,8 @@ resource "aws_security_group" "rds_sg" {
 
 }
 
-resource "aws_instance" "murali" {
-  ami = "0e86e20dae9224db8"
+resource "aws_instance" "name" {
+  ami = "ami-0e86e20dae9224db8"
   instance_type = "t2.medium"
   key_name = "susmitha"
   vpc_security_group_ids = [ "sg-0a42e27da7ff32bf6" ]
