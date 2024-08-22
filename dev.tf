@@ -3,10 +3,10 @@ provider "aws" {
 }
 
 resource "aws_instance" "dev" {
-  ami = "ami-0862be96e41dcbf74"
+  ami = "0e86e20dae9224db8"
   instance_type = "t2.medium"
-  key_name = "praveen"
-  vpc_security_group_ids = [ "sg-0e7783eb3e866cde2" ]
+  key_name = "susmitha"
+  vpc_security_group_ids = [ "sg-0a42e27da7ff32bf6" ]
   tags = {
     Name = "dev"
   }
@@ -21,7 +21,7 @@ provisioner "remote-exec" {
         "pip install virtualenv",
         "python3 -m venv /home/ubuntu/kumar",
         ". /home/ubuntu/kumar/bin/activate",
-        "git clone https://github.com/Praveenchinna14/teerdha19.git",
+        "git clone https://github.com/Susmithavardireddy/teerdha19.git",
         "cd teerdha19",
         "sudo apt install libmysqlclient-dev -y",
         "sudo apt install pkg-config -y",
@@ -40,7 +40,7 @@ provisioner "remote-exec" {
     connection {
       type     = "ssh"
       user     = "ubuntu"  
-      private_key = file("praveen.pem")  
+      private_key = file("susmitha.pem")  
       host     = self.public_ip  
     }
  }
